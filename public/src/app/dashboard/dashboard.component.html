@@ -1,0 +1,19 @@
+<a href="/logout">Logout</a>
+<a href="/create">Create a New Poll</a>
+<br>
+Current Polls:
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Survey Question</th>
+		<th>Date Posted</th>
+		<th>Action</th>
+	</tr>
+	<tr *ngFor="let poll of polls">
+		<td><a href="/poll/{{ poll._id}}">{{poll._user.name}}</a></td>
+		<td>{{poll.question}}</td>
+		<td>{{poll.createdAt | date: 'mediumDate' }}</td>
+		<td><button (click)="deletePoll(poll._id)">Delete</button></td>
+	</tr>
+</table>

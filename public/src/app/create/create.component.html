@@ -1,0 +1,20 @@
+<a href="/logout">Logout</a>
+<a href="/dashboard">Cancel</a>
+<br>
+<p>Put the question and options here:</p>
+<br>
+<p class="error" *ngFor="let err of errors">{{err}}</p>
+<h1>New Question</h1>
+<form (submit)="createPoll(formData)" #formData="ngForm">
+	<label>Question: <input type="text" name="question" ngModel></label>
+	<br>
+	<label>Option 1: <input type="text" name="optionOne" ngModel></label>
+	<br>
+	<label>Option 2: <input type="text" name="optionTwo" ngModel></label>
+	<br>
+	<label>Option 3: <input type="text" name="optionThree" ngModel></label>
+	<br>
+	<label>Option 4: <input type="text" name="optionFour" ngModel></label>
+	<br>
+	<input type="submit" value="Create Poll">
+</form>

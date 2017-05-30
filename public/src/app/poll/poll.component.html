@@ -1,0 +1,38 @@
+<a href="/dashboard">Go to Polls</a>
+
+
+<div *ngIf="poll">
+
+<h1>{{poll.question}}</h1>
+Click the Vote button to choose one.
+<br>
+<br>
+<table>
+	<tr>
+		<th>Option</th>
+		<th>Current Count of Votes</th>
+		<th>Action</th>
+	</tr>
+	<tr>
+		<td>{{poll.optionOne}}</td>
+		
+		<td>{{poll.voteOne}}</td>
+		<td><button (click)="addVoteOne(poll._id)">Vote</button></td>
+	</tr>
+	<tr>
+		<td>{{poll.optionTwo}}</td>
+		<td>{{poll.voteTwo}}</td>
+		<td><button (click)="addVoteTwo(poll._id)">Vote</button></td>
+	</tr>
+	<tr>
+		<td>{{poll.optionThree}}</td>
+		<td>{{poll.voteThree}}</td>
+		<td><button (click)="addVoteThree(poll._id)">Vote</button></td>
+	</tr>
+	<tr>
+		<td>{{poll.optionFour}}</td>
+		<td>{{poll.voteFour}}</td>
+		<td><button (click)="addVoteFour(poll._id)">Vote</button></td>
+	</tr>
+</table>
+</div>
